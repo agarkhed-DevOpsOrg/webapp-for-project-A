@@ -3,14 +3,14 @@
   become: true
   tasks:
   - name: Stop all docker containers
-    shell: sudo docker kill $(sudo docker ps -q)
+    shell: docker kill $(docker ps -q)
   - name: Remove all docker containers
-    shell: sudo docker container rm $(sudo docker ps -a)
+    shell: docker container rm $(sudo docker ps -a)
   - name: Remove all docker images
-    shell: sudo docker rmi $(sudo docker images -a -q)
+    shell: docker rmi $(docker images -a -q)
   - name: Build the image from Dockerfile
-    shell: sudo docker build -t ashwinpagarkhed/deployjava .
+    shell: docker build -t ashwinpagarkhed/deployjava .
   - name: Push the image to Dockerhub
-    shell: sudo docker push ashwinpagarkhed/deployjava
+    shell: docker push ashwinpagarkhed/deployjava
   - name: Run the container
-    shell: sudo docker run -d -it -p 8080:8080 ashwinpagarkhed/deployjava:latest
+    shell: docker run -d -it -p 8080:8080 ashwinpagarkhed/deployjava:latest
