@@ -1,5 +1,5 @@
 # Pull base image 
 FROM tomcat:latest 
 
-COPY webapp/target/*.war /usr/local/tomcat/webapps
+COPY *.war /usr/local/tomcat/webapps
 

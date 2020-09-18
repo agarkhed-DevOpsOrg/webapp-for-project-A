@@ -1,24 +1,38 @@
 ---
 - hosts: all
   become: true
+
   tasks:
-  - name: Stop all docker containers
-    shell: docker kill $(docker ps -q)
+  - name: Stop running docker container
+    command: docker stop ashwins-container
     ignore_errors: yes
 
-  - name: Remove all docker containers
-    shell: docker container rm $(sudo docker ps -a)
+  - name: Remove docker container
+    command: docker container rm ashwins-container
     ignore_errors: yes
 
-  - name: Remove all docker images
-    shell: docker rmi $(docker images -a -q)
+  - name: Remove docker image
+    command: docker rmi ashwinpagarkhed/deployjava
     ignore_errors: yes
 
   - name: Build the image from Dockerfile
-    shell: docker build -t ashwinpagarkhed/deployjava .
+    command: docker build -t ashwinpagarkhed/deployjava .
+    args:
+      chdir: /opt/docker
 
   - name: Push the image to Dockerhub
-    shell: docker push ashwinpagarkhed/deployjava
+    command: docker push ashwinpagarkhed/deployjava
 
-  - name: Run the container
-    shell: docker run -d -it -p 8080:8080 ashwinpagarkhed/deployjava:latest
+  - name: Run the image
+    command: docker run -d --name ashwins-container -p 8080:8080 ashwinpagarkhed/deployjava:latest
+
+
+
+
+
+
+
+
+
+
+
