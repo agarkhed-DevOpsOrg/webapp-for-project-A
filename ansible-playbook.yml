@@ -15,14 +15,6 @@
     command: docker rmi ashwinpagarkhed/deployjava
     ignore_errors: yes
 
-  - name: Build the image from Dockerfile
-    command: docker build -t ashwinpagarkhed/deployjava .
-    args:
-      chdir: /opt/docker
-
-  - name: Push the image to Dockerhub
-    command: docker push ashwinpagarkhed/deployjava
-
   - name: Run the image
     command: docker run -d --name ashwins-container -p 8080:8080 ashwinpagarkhed/deployjava:latest
 
