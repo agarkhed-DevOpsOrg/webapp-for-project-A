@@ -8,9 +8,7 @@
     ignore_errors: yes
 
   - name: Build the image from Dockerfile
-    command: docker build -t ashwinpagarkhed/deployjava .
-    args:
-      chdir: /opt/docker 
+    command: docker build -t ashwinpagarkhed/deployjava . 
 
   - name: Push the image to Dockerhub
     command: docker push ashwinpagarkhed/deployjava
