@@ -1,6 +1,6 @@
 # Deploying a Java-Spring Boot webapp on Kubernetes by using ansible playbooks and Architecting CI/CD Pipeline using Jenkins
 
-![Jenkins Builds](https://github.com/agarkhed-DevOpsOrg/webapp-for-project-A/blob/master/images/ArchitectureDiagram.jpeg?raw=true)
+![Architecture Diagram](https://github.com/agarkhed-DevOpsOrg/webapp-for-project-A/blob/master/images/ArchitectureDiagram.png?raw=true)
 
 ## Technology stack used:
 
