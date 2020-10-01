@@ -38,7 +38,7 @@
 
 1. Create kubernetes cluster
    ```sh
-   kubectl create cluster --name ashwinsCluster --nodes-min=2
+   eksctl create cluster --name ashwinsCluster --nodes-min=2
     ```
 
 1. To list nodes
@@ -48,5 +48,5 @@
 
 1. To delete cluster
     ```sh
-     eksctl delete cluster ashwinsCluster
+   eksctl delete cluster ashwinsCluster
     ```
