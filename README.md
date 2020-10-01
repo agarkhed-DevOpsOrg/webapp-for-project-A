@@ -1,4 +1,6 @@
-# Part-1 : Deploying a Java webapp on multiple nodes by Architecting CI/CD Pipeline
+# Deploying a Java-Spring Boot webapp on Kubernetes by using ansible playbooks and Architecting CI/CD Pipeline using Jenkins
+
+![Jenkins Builds](https://github.com/agarkhed-DevOpsOrg/webapp-for-project-A/blob/master/images/ArchitectureDiagram.jpeg?raw=true)
 
 ## Technology stack used:
 
@@ -41,3 +43,5 @@ ansible all -m ping
 ###### You should be seeing something like this:
 ![Ping Test](https://github.com/agarkhed-DevOpsOrg/webapp-for-project-A/blob/master/images/pingTest.png?raw=true)
 [Ansible Master Slave Configuration](https://github.com/agarkhed-DevOpsOrg/webapp-for-project-A/blob/master/Ansible.md)
+
+[Kubernetes Setup Configuration](https://github.com/agarkhed-DevOpsOrg/webapp-for-project-A/blob/master/K8s.md)
